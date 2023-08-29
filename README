@@ -1,0 +1,15 @@
+Contents:
+group_scrape_members.py - to scrape the group members of a telegram group and save it to a csv file (a csv file is like a simpler excel file and can be opened using excel)
+get_members_notsignedup.py - to compare the telegram username columns of a csv file and an excel file and generate two csvs - who is in the excel form but not in the csv and vice versa
+
+these two will basically help you check who is in a specific telegram group but not present in a signup form, and vice versa
+
+Setup:
+1. Download Python
+2. pip install the following python libraries - pandas, python-dotenv, telethon
+3. put your member signup excel form in the folder. make sure its name doesnt contain spaces
+4. in the .env file, put your telegram developer api id and hash in the relevant fields
+
+Using:
+1. run group_scrape_members.py. if this is your first time, you will need to enter your phone number and OTP. two session files will be generated which save this data so you dont have to login again
+2. run get_members_notsignedup.py. enter the names of your signup form and the file you just generated
